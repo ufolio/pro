@@ -1,0 +1,117 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'); */
+/* @import url('font.css'); */
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+
+	--font-family: 'Roboto', sans-serif;
+	--color-primary: #0360d0;
+	--color-second: #0360d0;
+	--color-text: #cbcbcb;
+
+	--color-bg-1: #333842;
+	--color-bg-2: #282c34;
+	--color-bg-3: #21252b;
+
+	--bg-9: rgba(0,0,0,.9);
+	--bg-8: rgba(0,0,0,.8);
+	--bg-7: rgba(0,0,0,.7);
+	--bg-6: rgba(0,0,0,.6);
+	--bg-5: rgba(0,0,0,.5);
+	--bg-4: rgba(0,0,0,.4);
+	--bg-3: rgba(0,0,0,.3);
+	--bg-2: rgba(0,0,0,.2);
+	--bg-1: rgba(0,0,0,.1);
+	--bg-0: rgba(0,0,0,0);
+
+  /*
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	box-sizing: border-box;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #25252b;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #101013;
+}
+
+#app {
+	padding: 0 0px 0px;
+	overflow-x: hidden;
+	position: relative;
+	background-color: rgb(122, 122, 122);
+	/* background-image: url(../img/bg2.jpeg); */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+	display: grid;
+	grid-gap: 0px;
+	/*grid-template-rows: auto auto 1fr;*/
+	grid-template-rows: 1fr;
+	grid-template-columns: auto 1fr;
+	grid-template-areas: 
+		"sidebar main"
+		"sidebar main";
+}
+
+#app:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,0);
+}
+
+.sidebar {
+	grid-area: sidebar;
+	background-color: var(--bg-9);
+	min-width: 230px;
+	padding: 20px 20px;
+}
+
+
+.main {
+	grid-area: main;
+	background-color: var(--bg-8);
+	padding: 20px 20px;
+	overflow-y: auto;
+}
+
+/*
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+*/
