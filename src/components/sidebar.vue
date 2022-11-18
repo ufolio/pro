@@ -5,7 +5,7 @@
             :key="item.id"
             :item="item"
             :class="{ active: activeItem === item.id }"
-            @click="changeItem(item.id)"
+            @click="activeItem = item.id"
         ></sidebar-item>
     </ul>
 </template>
@@ -15,16 +15,24 @@ import { ref } from 'vue'
 import sidebarItem from './SidebarItem.vue'
 
 const items = [
-    {id: 1, name: 'Muzfon'},
-    {id: 2, name: 'PMK Group'},
-    {id: 3, name: 'Organic Spa'},
+    {
+        id: 1, 
+        name: 'Muzfon',
+        domain: 'muzfon.pro',
+        note: '',
+    }, {
+        id: 2, 
+        name: 'PMK Group',
+        domain: 'pmkgroup.ru',
+        note: '',
+    }, {
+        id: 3, 
+        name: 'Organic Spa',
+        domain: 'spa-organic.ru',
+        note: '',
+    }
 ];
 
-var activeItem = ref(0);
-
-function changeItem(id) {
-    console.log(id);
-    activeItem = id;
-}
+const activeItem = ref(1);
 
 </script>

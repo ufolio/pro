@@ -112,7 +112,7 @@
 	margin: 0px 0 5px;
 }
 .sidebar li.active {
-	background-color: #238;
+	background-color: var(--color-primary);
 }
 .sidebar li:hover {}
 
@@ -122,6 +122,26 @@
 	background-color: var(--bg-1);
 	padding: 20px 20px;
 	overflow-y: auto;
+}
+
+label {
+	display: flex;
+	margin-bottom: 10px;
+}
+label p {
+	font-size: 14px;
+	margin: 5px 0;
+	margin-right: 20px;
+	width: 100px;
+}
+label input {
+	background: var(--bg-08);
+	border-radius: 5px;
+	padding: 5px 15px;
+	font-size: 14px;
+}
+label input:focus {
+	outline: none;
 }
 
 /*
